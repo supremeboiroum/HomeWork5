@@ -1,0 +1,25 @@
+function findFibonacciNumber(n) {
+    let num = '1 ';
+
+    if (!n || n < 0) {
+        return;
+    } else if (n === 1) {
+        return num;
+    } else {
+        for (let i = 2; i <= n; i++) {
+            num += `${fibonacciCount(i)} `;
+        }
+    }
+
+    return num;
+
+    function fibonacciCount(n) {
+        if (n === 0) {
+            return 0;
+        } else if (n === 1) {
+            return 1;
+        } else {
+            return fibonacciCount(n - 1) + fibonacciCount(n - 2);
+        }
+    }
+};
